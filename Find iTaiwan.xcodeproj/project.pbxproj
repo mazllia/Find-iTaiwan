@@ -12,7 +12,7 @@
 		06D67E781EBC4C93002885CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E761EBC4C93002885CC /* Main.storyboard */; };
 		06D67E7B1EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E791EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld */; };
 		06D67E7D1EBC4C93002885CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E7C1EBC4C93002885CC /* Assets.xcassets */; };
-		06D67E801EBC4C93002885CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E7E1EBC4C93002885CC /* LaunchScreen.storyboard */; };
+		06D67E8F1EBC52B0002885CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E8D1EBC52B0002885CC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +22,8 @@
 		06D67E771EBC4C93002885CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06D67E7A1EBC4C93002885CC /* Find_iTaiwan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Find_iTaiwan.xcdatamodel; sourceTree = "<group>"; };
 		06D67E7C1EBC4C93002885CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		06D67E7F1EBC4C93002885CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06D67E811EBC4C93002885CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06D67E8E1EBC52B0002885CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Find iTaiwan/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +59,36 @@
 				06D67E721EBC4C93002885CC /* AppDelegate.swift */,
 				06D67E741EBC4C93002885CC /* ViewController.swift */,
 				06D67E761EBC4C93002885CC /* Main.storyboard */,
-				06D67E7C1EBC4C93002885CC /* Assets.xcassets */,
-				06D67E7E1EBC4C93002885CC /* LaunchScreen.storyboard */,
-				06D67E811EBC4C93002885CC /* Info.plist */,
-				06D67E791EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld */,
+				06D67E881EBC4E7E002885CC /* Model */,
+				06D67E871EBC4D8E002885CC /* Server */,
+				06D67E8A1EBC4E9B002885CC /* Supporting Files */,
 			);
 			path = "Find iTaiwan";
+			sourceTree = "<group>";
+		};
+		06D67E871EBC4D8E002885CC /* Server */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		06D67E881EBC4E7E002885CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06D67E791EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06D67E8A1EBC4E9B002885CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				06D67E8D1EBC52B0002885CC /* LaunchScreen.storyboard */,
+				06D67E7C1EBC4C93002885CC /* Assets.xcassets */,
+				06D67E811EBC4C93002885CC /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06D67E801EBC4C93002885CC /* LaunchScreen.storyboard in Resources */,
+				06D67E8F1EBC52B0002885CC /* LaunchScreen.storyboard in Resources */,
 				06D67E7D1EBC4C93002885CC /* Assets.xcassets in Resources */,
 				06D67E781EBC4C93002885CC /* Main.storyboard in Resources */,
 			);
@@ -157,10 +181,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		06D67E7E1EBC4C93002885CC /* LaunchScreen.storyboard */ = {
+		06D67E8D1EBC52B0002885CC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				06D67E7F1EBC4C93002885CC /* Base */,
+				06D67E8E1EBC52B0002885CC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -268,7 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 556AH62ZM2;
-				INFOPLIST_FILE = "Find iTaiwan/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Find iTaiwan/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.DaiPengYang.Find-iTaiwan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 556AH62ZM2;
-				INFOPLIST_FILE = "Find iTaiwan/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Find iTaiwan/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.DaiPengYang.Find-iTaiwan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -308,6 +332,7 @@
 				06D67E861EBC4C93002885CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
