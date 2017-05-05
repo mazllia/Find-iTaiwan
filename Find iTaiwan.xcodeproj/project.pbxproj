@@ -13,6 +13,7 @@
 		06D67E7B1EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E791EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld */; };
 		06D67E7D1EBC4C93002885CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E7C1EBC4C93002885CC /* Assets.xcassets */; };
 		06D67E8F1EBC52B0002885CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E8D1EBC52B0002885CC /* LaunchScreen.storyboard */; };
+		06D67E911EBC53C2002885CC /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E901EBC53C2002885CC /* DataSerializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		06D67E7C1EBC4C93002885CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06D67E811EBC4C93002885CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06D67E8E1EBC52B0002885CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Find iTaiwan/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
+		06D67E901EBC53C2002885CC /* DataSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSerializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		06D67E871EBC4D8E002885CC /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				06D67E901EBC53C2002885CC /* DataSerializer.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D67E911EBC53C2002885CC /* DataSerializer.swift in Sources */,
 				06D67E751EBC4C93002885CC /* ViewController.swift in Sources */,
 				06D67E731EBC4C93002885CC /* AppDelegate.swift in Sources */,
 				06D67E7B1EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld in Sources */,
