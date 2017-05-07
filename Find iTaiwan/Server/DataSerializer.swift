@@ -15,12 +15,12 @@ fileprivate extension NSRegularExpression {
 
 /// Serialize iTaiwan csv file from [official website](http://itaiwan.gov.tw/func/hotspotlist.csv)
 public class DataSerializer {
-	public enum Key: String {
-		case city, name, postCode, address, latitude, longitude
-		
-		var allValues: [Key] {
-			return [.city, .name, .postCode, .address, .latitude, .longitude]
-		}
+	public struct Key {
+		static let city = "city"
+		static let name = "name"
+		static let address = "address"
+		static let latitude = "latitude"
+		static let longitude = "longitude"
 	}
 	
 	internal static let postCodeRegularExpression = try! NSRegularExpression(pattern: "^(\\d*)(.*)$", options: [])
