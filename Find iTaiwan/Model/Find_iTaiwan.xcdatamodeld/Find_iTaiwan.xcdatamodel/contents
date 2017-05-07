@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="City" representedClassName="City" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="nodes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Node" inverseName="inCity" inverseEntity="Node" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" attributeType="Float" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitude" attributeType="Float" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="nodes" toMany="YES" deletionRule="Cascade" destinationEntity="Node" inverseName="inLocation" inverseEntity="Node" syncable="YES"/>
+    </entity>
+    <entity name="Node" representedClassName="Node" syncable="YES" codeGenerationType="category">
+        <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="inCity" maxCount="1" deletionRule="Nullify" destinationEntity="City" inverseName="nodes" inverseEntity="City" syncable="YES"/>
+        <relationship name="inLocation" maxCount="1" deletionRule="Cascade" destinationEntity="Location" inverseName="nodes" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="City" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Node" positionX="151" positionY="-18" width="128" height="103"/>
+        <element name="Location" positionX="349" positionY="-18" width="128" height="88"/>
+    </elements>
 </model>
