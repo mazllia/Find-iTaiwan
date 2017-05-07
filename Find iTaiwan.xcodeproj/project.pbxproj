@@ -14,7 +14,20 @@
 		06D67E7D1EBC4C93002885CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E7C1EBC4C93002885CC /* Assets.xcassets */; };
 		06D67E8F1EBC52B0002885CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E8D1EBC52B0002885CC /* LaunchScreen.storyboard */; };
 		06D67E911EBC53C2002885CC /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E901EBC53C2002885CC /* DataSerializer.swift */; };
+		06D67E991EBC6843002885CC /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E981EBC6843002885CC /* DataSerializer.swift */; };
+		06D67EA41EBC7242002885CC /* test.csv in Resources */ = {isa = PBXBuildFile; fileRef = 06D67EA31EBC7242002885CC /* test.csv */; };
+		06D67EA61EBC72B9002885CC /* titleOnly.csv in Resources */ = {isa = PBXBuildFile; fileRef = 06D67EA51EBC72B9002885CC /* titleOnly.csv */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06D67E9B1EBC6843002885CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06D67E671EBC4C93002885CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06D67E6E1EBC4C93002885CC;
+			remoteInfo = "Find iTaiwan";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		06D67E6F1EBC4C93002885CC /* Find iTaiwan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find iTaiwan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +39,22 @@
 		06D67E811EBC4C93002885CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06D67E8E1EBC52B0002885CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Find iTaiwan/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
 		06D67E901EBC53C2002885CC /* DataSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSerializer.swift; sourceTree = "<group>"; };
+		06D67E961EBC6843002885CC /* Find iTaiwan Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find iTaiwan Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06D67E981EBC6843002885CC /* DataSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSerializer.swift; sourceTree = "<group>"; };
+		06D67E9A1EBC6843002885CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		06D67EA31EBC7242002885CC /* test.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.csv; sourceTree = "<group>"; };
+		06D67EA51EBC72B9002885CC /* titleOnly.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = titleOnly.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		06D67E6C1EBC4C93002885CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06D67E931EBC6843002885CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				06D67E711EBC4C93002885CC /* Find iTaiwan */,
+				06D67E971EBC6843002885CC /* Find iTaiwan Tests */,
 				06D67E701EBC4C93002885CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				06D67E6F1EBC4C93002885CC /* Find iTaiwan.app */,
+				06D67E961EBC6843002885CC /* Find iTaiwan Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +121,25 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		06D67E971EBC6843002885CC /* Find iTaiwan Tests */ = {
+			isa = PBXGroup;
+			children = (
+				06D67E981EBC6843002885CC /* DataSerializer.swift */,
+				06D67EA01EBC68C5002885CC /* Resources */,
+			);
+			path = "Find iTaiwan Tests";
+			sourceTree = "<group>";
+		};
+		06D67EA01EBC68C5002885CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				06D67EA31EBC7242002885CC /* test.csv */,
+				06D67EA51EBC72B9002885CC /* titleOnly.csv */,
+				06D67E9A1EBC6843002885CC /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +160,24 @@
 			productReference = 06D67E6F1EBC4C93002885CC /* Find iTaiwan.app */;
 			productType = "com.apple.product-type.application";
 		};
+		06D67E951EBC6843002885CC /* Find iTaiwan Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06D67E9D1EBC6843002885CC /* Build configuration list for PBXNativeTarget "Find iTaiwan Tests" */;
+			buildPhases = (
+				06D67E921EBC6843002885CC /* Sources */,
+				06D67E931EBC6843002885CC /* Frameworks */,
+				06D67E941EBC6843002885CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06D67E9C1EBC6843002885CC /* PBXTargetDependency */,
+			);
+			name = "Find iTaiwan Tests";
+			productName = "Find iTaiwan Tests";
+			productReference = 06D67E961EBC6843002885CC /* Find iTaiwan Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -128,6 +192,12 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 556AH62ZM2;
 						ProvisioningStyle = Automatic;
+					};
+					06D67E951EBC6843002885CC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 556AH62ZM2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 06D67E6E1EBC4C93002885CC;
 					};
 				};
 			};
@@ -145,6 +215,7 @@
 			projectRoot = "";
 			targets = (
 				06D67E6E1EBC4C93002885CC /* Find iTaiwan */,
+				06D67E951EBC6843002885CC /* Find iTaiwan Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -157,6 +228,15 @@
 				06D67E8F1EBC52B0002885CC /* LaunchScreen.storyboard in Resources */,
 				06D67E7D1EBC4C93002885CC /* Assets.xcassets in Resources */,
 				06D67E781EBC4C93002885CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06D67E941EBC6843002885CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06D67EA41EBC7242002885CC /* test.csv in Resources */,
+				06D67EA61EBC72B9002885CC /* titleOnly.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +254,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06D67E921EBC6843002885CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06D67E991EBC6843002885CC /* DataSerializer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06D67E9C1EBC6843002885CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06D67E6E1EBC4C93002885CC /* Find iTaiwan */;
+			targetProxy = 06D67E9B1EBC6843002885CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		06D67E761EBC4C93002885CC /* Main.storyboard */ = {
@@ -317,6 +413,34 @@
 			};
 			name = Release;
 		};
+		06D67E9E1EBC6843002885CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 556AH62ZM2;
+				INFOPLIST_FILE = "Find iTaiwan Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tw.DaiPengYang.Find-iTaiwan-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find iTaiwan.app/Find iTaiwan";
+			};
+			name = Debug;
+		};
+		06D67E9F1EBC6843002885CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 556AH62ZM2;
+				INFOPLIST_FILE = "Find iTaiwan Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tw.DaiPengYang.Find-iTaiwan-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find iTaiwan.app/Find iTaiwan";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +458,15 @@
 			buildConfigurations = (
 				06D67E851EBC4C93002885CC /* Debug */,
 				06D67E861EBC4C93002885CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06D67E9D1EBC6843002885CC /* Build configuration list for PBXNativeTarget "Find iTaiwan Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06D67E9E1EBC6843002885CC /* Debug */,
+				06D67E9F1EBC6843002885CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
