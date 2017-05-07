@@ -1,18 +1,5 @@
 import Foundation
 
-fileprivate extension NSRegularExpression {
-	/// A convenient function that specify range as the full lengh of `in string: String`
-	func matches(in string: String, options: NSRegularExpression.MatchingOptions = []) -> [NSTextCheckingResult] {
-		let range = NSRange(location: 0, length: (string as NSString).length)
-		return matches(in: string, options: options, range: range)
-	}
-	
-	func matchStrings(in string: String, options: NSRegularExpression.MatchingOptions = []) -> [String] {
-		return matches(in: string, options: options)
-			.map() { (string as NSString).substring(with: $0.range) }
-	}
-}
-
 /// Serialize iTaiwan csv file from [official website](http://itaiwan.gov.tw/func/hotspotlist.csv)
 public class DataSerializer {
 	public struct Key {
@@ -23,31 +10,56 @@ public class DataSerializer {
 		static let longitude = "longitude"
 	}
 	
-	internal static let postCodeRegularExpression = try! NSRegularExpression(pattern: "^(\\d*)(.*)$", options: [])
+	internal static let postCodeRegularExpression = try! NSRegularExpression(pattern: "^\\d{3|5}", options: [])
 	
 	/// csv title foramtted: `"主管機關","地區","熱點名稱","地址","緯度","經度"`
 	public static func serialize(string: String) throws -> [[String : String]] {
 		return string
-			.components(separatedBy: .newlines)
+			.components(separatedBy: "\r\n")
 			.dropFirst()
+			// TODO: Invest why there's an empty component in the last line. EOF? Should opt for .filter()?
+			.dropLast()
 			.map() {
 				let values = $0
 					.replacingOccurrences(of: "\"", with: "")
 					.components(separatedBy: ",")
 				
-				let addressInfo: (postCode: String, address: String) = {
-					let strings = postCodeRegularExpression.matchStrings(in: values[3])
-					return (strings[0], strings[1])
+				let address: String = {
+					let rawString = values[3]
+					
+					let postCodeAndCityRegularExpression = try! NSRegularExpression(pattern: "^(\\d{3}|\\d{5})" + values[1], options: [])
+					return postCodeAndCityRegularExpression.stringByReplacingMatches(in: rawString, options: [], range: rawString.NSRange, withTemplate: "")
 				}()
 				
 				return [
-					Key.city.rawValue: values[1],
-					Key.name.rawValue: values[2],
-					Key.postCode.rawValue: addressInfo.postCode,
-					Key.address.rawValue: addressInfo.address,
-					Key.latitude.rawValue: values[4],
-					Key.longitude.rawValue: values[5],
+					Key.city: values[1],
+					Key.name: values[2],
+					Key.address: address,
+					Key.latitude: values[4],
+					Key.longitude: values[5],
 				]
 		}
+	}
+}
+
+// MARK: String helper
+internal extension String {
+	// MARK: Big 5 Extension
+	private struct Big5Encoding {
+		static let CoreFoundation = CFStringEncoding(CFStringEncodings.big5_HKSCS_1999.rawValue)
+		static let Foundation = CFStringConvertEncodingToNSStringEncoding(CoreFoundation)
+	}
+	
+	init?(big5EData data: Data) {
+		if let string = NSString(data: data, encoding: Big5Encoding.Foundation) as String? {
+			self.init(string)
+		} else {
+			return nil
+		}
+	}
+	
+	// MARK: NSRange
+	var NSRange: Foundation.NSRange {
+		return Foundation.NSRange(location: 0, length: (self as NSString).length)
 	}
 }
