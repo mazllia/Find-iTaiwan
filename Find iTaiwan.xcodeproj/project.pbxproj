@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062244111EBF635A00775F50 /* Node+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0622440B1EBF635A00775F50 /* Node+CoreDataClass.swift */; };
+		062244191EBF6B2E00775F50 /* City+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062244171EBF6B2E00775F50 /* City+CoreDataClass.swift */; };
+		0622441A1EBF6B2E00775F50 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062244181EBF6B2E00775F50 /* Location+CoreDataClass.swift */; };
 		06D67E731EBC4C93002885CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E721EBC4C93002885CC /* AppDelegate.swift */; };
 		06D67E751EBC4C93002885CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E741EBC4C93002885CC /* ViewController.swift */; };
 		06D67E781EBC4C93002885CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E761EBC4C93002885CC /* Main.storyboard */; };
@@ -30,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0622440B1EBF635A00775F50 /* Node+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Node+CoreDataClass.swift"; sourceTree = "<group>"; };
+		062244171EBF6B2E00775F50 /* City+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
+		062244181EBF6B2E00775F50 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
 		06D67E6F1EBC4C93002885CC /* Find iTaiwan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find iTaiwan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D67E721EBC4C93002885CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06D67E741EBC4C93002885CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				06D67E791EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld */,
+				062244171EBF6B2E00775F50 /* City+CoreDataClass.swift */,
+				062244181EBF6B2E00775F50 /* Location+CoreDataClass.swift */,
+				0622440B1EBF635A00775F50 /* Node+CoreDataClass.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,8 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0622441A1EBF6B2E00775F50 /* Location+CoreDataClass.swift in Sources */,
+				062244191EBF6B2E00775F50 /* City+CoreDataClass.swift in Sources */,
 				06D67E911EBC53C2002885CC /* DataSerializer.swift in Sources */,
 				06D67E751EBC4C93002885CC /* ViewController.swift in Sources */,
+				062244111EBF635A00775F50 /* Node+CoreDataClass.swift in Sources */,
 				06D67E731EBC4C93002885CC /* AppDelegate.swift in Sources */,
 				06D67E7B1EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld in Sources */,
 			);
