@@ -3,7 +3,7 @@ import CoreData
 
 @objc(City)
 public class City: NSManagedObject {
-	public class func findOrCreate(name: String, in context: NSManagedObjectContext) -> City {
+	internal class func findOrCreate(name: String, in context: NSManagedObjectContext) -> City {
 		let request: NSFetchRequest<City> = {
 			let $: NSFetchRequest<City> = fetchRequest()
 			$.predicate = NSPredicate(format: "name == %@", name)
@@ -14,7 +14,7 @@ public class City: NSManagedObject {
 		return results.first ?? City(name: name, insertInto: context)
 	}
 	
-	convenience init(name: String, insertInto context: NSManagedObjectContext) {
+	convenience fileprivate init(name: String, insertInto context: NSManagedObjectContext) {
 		self.init(entity: type(of: self).entity(), insertInto: context)
 		self.name = name
 	}

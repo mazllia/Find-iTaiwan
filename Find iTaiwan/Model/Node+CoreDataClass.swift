@@ -6,28 +6,25 @@ public class Node: NSManagedObject {
 	convenience public init?(_ dictionary: [String: String], insertInto context: NSManagedObjectContext) {
 		typealias Key = DataSerializer.Key
 		
-		guard Set(Key.allKeys).isSubset(of: dictionary.keys) else {
-			assertionFailure("Cannot create model with: \(dictionary)")
-			return nil
+		guard
+			let address = dictionary[Key.address],
+			let name = dictionary[Key.name],
+			let city = dictionary[Key.city],
+			let latitudeString = dictionary[Key.latitude],
+			let latitude = Float(latitudeString),
+			let longitudeString = dictionary[Key.longitude],
+			let longitude = Float(longitudeString) else {
+				assertionFailure("Cannot create model with: \(dictionary)")
+				return nil
 		}
 		
 		self.init(
 			entity: type(of: self).entity(),
 			insertInto: context
 		)
-		address = dictionary[Key.address]
-		name = dictionary[Key.name]
-		inCity = City.findOrCreate(name: dictionary[Key.city]!, in: context)
-		inLocation = Location.findOrCreate(
-			latitude: Float(dictionary[Key.latitude]!)!,
-			longitude: Float(dictionary[Key.longitude]!)!,
-			in: context
-		)
-	}
-}
-
-private extension DataSerializer.Key {
-	static var allKeys: [String] {
-		return [city, name, address, latitude, longitude]
+		self.address = address
+		self.name = name
+		inCity = City.findOrCreate(name: city, in: context)
+		inLocation = Location.findOrCreate(latitude: latitude, longitude: longitude, in: context)
 	}
 }

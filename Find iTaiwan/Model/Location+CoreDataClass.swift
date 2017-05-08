@@ -3,7 +3,7 @@ import CoreData
 
 @objc(Location)
 public class Location: NSManagedObject {
-	public class func findOrCreate(latitude: Float, longitude: Float, in context: NSManagedObjectContext) -> Location {
+	internal class func findOrCreate(latitude: Float, longitude: Float, in context: NSManagedObjectContext) -> Location {
 		let request: NSFetchRequest<Location> = {
 			let $: NSFetchRequest<Location> = fetchRequest()
 			$.predicate = NSPredicate(format: "latitude == %@ AND longitude == %@",
@@ -17,7 +17,7 @@ public class Location: NSManagedObject {
 		return results.first ?? Location(latitude: latitude, longitude: longitude, insertInto: context)
 	}
 	
-	convenience init(latitude: Float, longitude: Float, insertInto context: NSManagedObjectContext) {
+	convenience fileprivate init(latitude: Float, longitude: Float, insertInto context: NSManagedObjectContext) {
 		self.init(entity: type(of: self).entity(), insertInto: context)
 		self.latitude = latitude
 		self.longitude = longitude
