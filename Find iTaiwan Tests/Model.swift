@@ -28,7 +28,10 @@ class ModelTests: XCTestCase {
 	/// Clear all data in root context, tests are performed in temporary clear context
     override class func setUp() {
 		modelContainer = ModelContainer(name: "Test Coordinator", managedObjectModel: ModelContainer.default.managedObjectModel)
-		modelContainer.loadPersistentStores() { (_, error) in XCTAssertNil(error) }
+		modelContainer.loadPersistentStores() { _, error in
+			assert(error == nil)
+			assert(modelContainer.viewContext.registeredObjects.count == 0)
+		}
 		
 		super.setUp()
     }
@@ -73,10 +76,5 @@ class ModelTests: XCTestCase {
 		XCTAssertNotEqual(node1.inLocation, node2.inLocation)
 		
 		XCTAssert(context.registeredObjects.count == 5)
-    }
-	
-	func testClearAll() {
-		let context = type(of: self).modelContainer.newBackgroundContext()
-		XCTAssert(context.registeredObjects.count == 0)
-	}
+    }	
 }
