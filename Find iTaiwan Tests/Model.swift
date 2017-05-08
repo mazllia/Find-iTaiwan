@@ -23,21 +23,33 @@ class ModelTests: XCTestCase {
 		]
 	}
 	
+	static var modelContainer: ModelContainer!
+	
 	/// Clear all data in root context, tests are performed in temporary clear context
     override class func setUp() {
-		ModelContainer.default.clearAll()
+		modelContainer = ModelContainer(name: "Test Coordinator", managedObjectModel: ModelContainer.default.managedObjectModel)
+		modelContainer.loadPersistentStores() { (_, error) in XCTAssertNil(error) }
 		
 		super.setUp()
     }
     
     override class func tearDown() {
-		ModelContainer.default.clearAll()
+		modelContainer.persistentStoreDescriptions.forEach() {
+			if let URL = $0.url {
+				[
+					URL,
+					URL.deletingPathExtension().appendingPathExtension("sqlite-shm"),
+					URL.deletingPathExtension().appendingPathExtension("sqlite-wal")
+					]
+					.forEach() { try! FileManager.default.removeItem(at: $0) }
+			}
+		}
 		
         super.tearDown()
     }
     
     func testConfiguration() {
-		let context = ModelContainer.default.newBackgroundContext()
+		let context = type(of: self).modelContainer.newBackgroundContext()
 		
 		func testNodeProperty(node: Node, dictionary: [String: String]) {
 			XCTAssertEqual(node.name, dictionary[TestData.Key.name])
@@ -64,7 +76,7 @@ class ModelTests: XCTestCase {
     }
 	
 	func testClearAll() {
-		let context = ModelContainer.default.newBackgroundContext()
+		let context = type(of: self).modelContainer.newBackgroundContext()
 		XCTAssert(context.registeredObjects.count == 0)
 	}
 }
