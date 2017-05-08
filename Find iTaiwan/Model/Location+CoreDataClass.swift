@@ -6,7 +6,7 @@ public class Location: NSManagedObject {
 	public class func findOrCreate(latitude: Float, longitude: Float, in context: NSManagedObjectContext) -> Location {
 		let request: NSFetchRequest<Location> = {
 			let $: NSFetchRequest<Location> = fetchRequest()
-			$.predicate = NSPredicate(format: "latitude == %@, longitude == %@",
+			$.predicate = NSPredicate(format: "latitude == %@ AND longitude == %@",
 			                          NSNumber(value: latitude),
 			                          NSNumber(value: longitude)
 			)
@@ -14,7 +14,7 @@ public class Location: NSManagedObject {
 		}()
 		
 		let results = try! context.fetch(request)
-		return results.first ?? Location(entity: entity(), insertInto: context)
+		return results.first ?? Location(latitude: latitude, longitude: longitude, insertInto: context)
 	}
 	
 	convenience init(latitude: Float, longitude: Float, insertInto context: NSManagedObjectContext) {
