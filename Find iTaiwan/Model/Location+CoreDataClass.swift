@@ -23,3 +23,22 @@ public class Location: NSManagedObject {
 		self.longitude = longitude
 	}
 }
+
+import MapKit
+public extension Location {
+	class func fetchRequest(in region: MKCoordinateRegion) -> NSFetchRequest<Location> {
+		let latitudeRange = (region.center.latitude - region.span.latitudeDelta / 2 ...
+			region.center.latitude + region.span.latitudeDelta / 2
+		)
+		let longitudeRange = (region.center.longitude - region.span.longitudeDelta / 2 ...
+			region.center.longitude + region.span.longitudeDelta / 2
+		)
+		
+		let $: NSFetchRequest<Location> = fetchRequest()
+		$.predicate = NSPredicate(format: "latitude >= %@ && latitude <= %@ && longitude >= %@ && longitude <= %@",
+		                          NSNumber(value: latitudeRange.lowerBound), NSNumber(value: latitudeRange.upperBound),
+		                          NSNumber(value: longitudeRange.lowerBound), NSNumber(value: longitudeRange.upperBound)
+		)
+		return $
+	}
+}
