@@ -75,7 +75,6 @@ class ViewController: UIViewController {
 		
 		navigationController?.setNavigationBarHidden(true, animated: false)
 		navigationController?.setToolbarHidden(false, animated: false)
-		navigationController?.hidesBarsWhenVerticallyCompact = true
 		
 		// Note: Request location asap to avoid map view loads nonrelated resources
 		func requestLocationAuthorization() {
@@ -87,7 +86,9 @@ class ViewController: UIViewController {
 		
 		mapView.setUserTrackingMode(.follow, animated: false)
 		
+	}
 	
+	// MARK: Action
 	@IBAction func follow(_ sender: Any) {
 		switch CLLocationManager.authorizationStatus() {
 		case .notDetermined:
@@ -104,6 +105,11 @@ class ViewController: UIViewController {
 		case .authorizedAlways, .authorizedWhenInUse:
 			mapView.setUserTrackingMode(.follow, animated: true)
 		}
+	}
+	
+	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+		let shouldHideToolBar = traitCollection.verticalSizeClass == .compact
+		navigationController?.setToolbarHidden(shouldHideToolBar, animated: true)
 	}
 }
 
