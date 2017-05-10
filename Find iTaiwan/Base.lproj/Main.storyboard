@@ -32,11 +32,15 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Item" id="nDU-9n-0Ka"/>
+                        <barButtonItem title="setting" id="C4L-fr-76b"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="qJp-Ss-BAY"/>
+                        <barButtonItem title="follow me" id="nDU-9n-0Ka">
+                            <connections>
+                                <action selector="follow:" destination="BYZ-38-t0r" id="jA9-RG-Epe"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="wVt-Gw-f6H">
-                        <barButtonItem key="rightBarButtonItem" title="More" id="4AE-7H-pYy"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="wVt-Gw-f6H"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="WUS-OM-RsX" id="ZaZ-9D-YoI"/>

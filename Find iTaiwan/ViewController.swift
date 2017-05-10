@@ -74,6 +74,8 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		navigationController?.setNavigationBarHidden(true, animated: false)
+		navigationController?.setToolbarHidden(false, animated: false)
+		navigationController?.hidesBarsWhenVerticallyCompact = true
 		
 		// Note: Request location asap to avoid map view loads nonrelated resources
 		func requestLocationAuthorization() {
