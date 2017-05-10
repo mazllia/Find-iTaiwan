@@ -41,7 +41,6 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="wVt-Gw-f6H"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="WUS-OM-RsX" id="ZaZ-9D-YoI"/>
                     </connections>
@@ -53,13 +52,17 @@
         <!--Navigation Controller-->
         <scene sceneID="uZh-h8-2Ps">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gTS-2p-98b" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="gTS-2p-98b" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SVZ-v7-G4L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LF0-n6-eCw">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yI5-nQ-Id4"/>
                     </connections>

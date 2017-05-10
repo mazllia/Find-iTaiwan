@@ -73,9 +73,6 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		navigationController?.setNavigationBarHidden(true, animated: false)
-		navigationController?.setToolbarHidden(false, animated: false)
-		
 		// Note: Request location asap to avoid map view loads nonrelated resources
 		func requestLocationAuthorization() {
 			if CLLocationManager.authorizationStatus() == .notDetermined {
