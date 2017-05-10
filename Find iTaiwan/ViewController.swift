@@ -58,25 +58,33 @@ class ViewController: UIViewController {
 			return map.camera.altitude < $.cameraDistance ||
 				locations.count < $.annotationCount
 		}()
-		guard shouldShowAnnotations else {
+		
+		func configureNavigationBar() {
 			// TODO: Formatted localization
-			navigationItem.title = locations.count.description + NSLocalizedString("routers", comment: "When map camera latitude has not reached max visible annotations, shows navigation item title string")
-			navigationItem.prompt = NSLocalizedString("zoom in for details", comment: "When map camera latitude has not reached max visible annotations, shows navigation item prompt string")
-			navigationController?.setNavigationBarHidden(false, animated: true)
+			navigationItem.title = shouldShowAnnotations ? nil :
+				locations.count.description + NSLocalizedString("routers", comment: "When map camera latitude has not reached max visible annotations, shows navigation item title string")
 			
-			map.removeAnnotations(map.annotations)
-			return
+			navigationItem.prompt = shouldShowAnnotations ? nil :
+				NSLocalizedString("zoom in for details", comment: "When map camera latitude has not reached max visible annotations, shows navigation item prompt string")
+			
+			navigationController?.setNavigationBarHidden(shouldShowAnnotations ? true : false, animated: true)
+			
+		}
+		func configureAnnotations() {
+			guard shouldShowAnnotations else {
+				map.removeAnnotations(map.annotations)
+				return
+			}
+			
+			let newlyInsertedLocations = didShowAnnotaions ? Set(locations).subtracting(previousLocations).allObjects : locations
+			let removedLocations = Set(previousLocations).subtracting(locations).allObjects
+			
+			map.removeAnnotations(removedLocations)
+			map.addAnnotations(newlyInsertedLocations)
 		}
 		
-		navigationItem.title = nil
-		navigationItem.prompt = nil
-		navigationController?.setNavigationBarHidden(true, animated: true)
-		
-		let newlyInsertedLocations = didShowAnnotaions ? Set(locations).subtracting(previousLocations).allObjects : locations
-		let removedLocations = Set(previousLocations).subtracting(locations).allObjects
-		
-		map.removeAnnotations(removedLocations)
-		map.addAnnotations(newlyInsertedLocations)
+		configureNavigationBar()
+		configureAnnotations()
 	}
 	
 	// MARK: Life Cycle
