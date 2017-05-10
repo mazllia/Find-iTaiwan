@@ -87,6 +87,33 @@ class ViewController: UIViewController {
 		
 		mapView.setUserTrackingMode(.follow, animated: false)
 		
+	
+	@IBAction func follow(_ sender: Any) {
+		switch CLLocationManager.authorizationStatus() {
+		case .notDetermined:
+			locationManager.requestWhenInUseAuthorization()
+			
+		case .denied, .restricted:
+			let goSettingAlertController: UIAlertController = {
+				let $ = UIAlertController(
+					title: NSLocalizedString("Location Service", comment: "When failed to authorized from CoreLocation, alert controller title"),
+					message: NSLocalizedString("We need your permission to follow you by getting your location info.", comment: "When failed to authorized from CoreLocation, alert controller message"),
+					preferredStyle: .alert
+				)
+				[
+					UIAlertAction(title: NSLocalizedString("Go Settings", comment: "When failed to authorized from CoreLocation, alert action go settings string"), style: .default, handler: { _ in
+						UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!, options: [:], completionHandler: nil)
+					}),
+					UIAlertAction(title: NSLocalizedString("Cancel", comment: "When failed to authorized from CoreLocation, alert action go settings string"), style: .cancel, handler: nil)
+					].forEach() { $.addAction($0) }
+				
+				return $
+			}()
+			present(goSettingAlertController, animated: true, completion: nil)
+			
+		case .authorizedAlways, .authorizedWhenInUse:
+			mapView.setUserTrackingMode(.follow, animated: true)
+		}
 	}
 }
 
