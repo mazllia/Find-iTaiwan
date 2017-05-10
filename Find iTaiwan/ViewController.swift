@@ -44,7 +44,7 @@ class ViewController: UIViewController {
 		func configureNavigationBar() {
 			// TODO: Formatted localization
 			navigationItem.title = shouldShowAnnotations ? nil :
-				locations.count.description + NSLocalizedString("routers", comment: "When map camera latitude has not reached max visible annotations, shows navigation item title string")
+				locations.count.description + " " + NSLocalizedString("routers", comment: "When map camera latitude has not reached max visible annotations, shows navigation item title string")
 			
 			navigationItem.prompt = shouldShowAnnotations ? nil :
 				NSLocalizedString("zoom in for details", comment: "When map camera latitude has not reached max visible annotations, shows navigation item prompt string")
