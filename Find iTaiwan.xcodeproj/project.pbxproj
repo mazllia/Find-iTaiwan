@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061E13B11EC31AE7001FE9C0 /* UIAlertController + Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E13B01EC31AE7001FE9C0 /* UIAlertController + Present.swift */; };
 		062244111EBF635A00775F50 /* Node+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0622440B1EBF635A00775F50 /* Node+CoreDataClass.swift */; };
 		062244191EBF6B2E00775F50 /* City+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062244171EBF6B2E00775F50 /* City+CoreDataClass.swift */; };
 		0622441A1EBF6B2E00775F50 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062244181EBF6B2E00775F50 /* Location+CoreDataClass.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061E13B01EC31AE7001FE9C0 /* UIAlertController + Present.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController + Present.swift"; sourceTree = "<group>"; };
 		0622440B1EBF635A00775F50 /* Node+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Node+CoreDataClass.swift"; sourceTree = "<group>"; };
 		062244171EBF6B2E00775F50 /* City+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
 		062244181EBF6B2E00775F50 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				06D67E721EBC4C93002885CC /* AppDelegate.swift */,
 				06D67E741EBC4C93002885CC /* ViewController.swift */,
+				061E13B01EC31AE7001FE9C0 /* UIAlertController + Present.swift */,
 				067A6AAF1EC07D9D00BFB30D /* API.swift */,
 				06D67E761EBC4C93002885CC /* Main.storyboard */,
 				067A6AA61EC05CBC00BFB30D /* View */,
@@ -279,6 +282,7 @@
 				067A6AB01EC07D9D00BFB30D /* API.swift in Sources */,
 				0622441A1EBF6B2E00775F50 /* Location+CoreDataClass.swift in Sources */,
 				067A6AA81EC05CD800BFB30D /* Location + MKAnnotation.swift in Sources */,
+				061E13B11EC31AE7001FE9C0 /* UIAlertController + Present.swift in Sources */,
 				062244191EBF6B2E00775F50 /* City+CoreDataClass.swift in Sources */,
 				06D67E911EBC53C2002885CC /* DataSerializer.swift in Sources */,
 				06D67E751EBC4C93002885CC /* ViewController.swift in Sources */,
