@@ -53,7 +53,7 @@ class MapVC: UIViewController {
 			case (false, _):
 				// TODO: Formatted localization
 				navigationItem.title = locations.count.description + " " +
-					NSLocalizedString("routers", comment: "When map does not reached annotationVisibleThreshold, shows navigation item title string")
+					NSLocalizedString("locations", comment: "When map does not reached annotationVisibleThreshold, shows navigation item title string")
 				navigationItem.prompt = NSLocalizedString("zoom in for details", comment: "When map does not reached annotationVisibleThreshold, shows navigation item prompt string")
 				navigationController?.setNavigationBarHidden(false, animated: true)
 				
