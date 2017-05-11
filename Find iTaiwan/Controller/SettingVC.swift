@@ -85,20 +85,17 @@ extension SettingVC: ProgressDelegate {
 	}
 	
 	func progressChangedTo(state: API.SyncState) {
-		switch state {
-		case .downloadFailed(_):
+		if case let .parsing(completedUnitCount, totalUnitCount) = state {
+			updateProgressView.setProgress(Float(completedUnitCount) / Float(totalUnitCount), animated: true)
+		}
+		
+		if case .downloadFailed(_) = state {
 			presentAlert(
 				title: NSLocalizedString("Download failed", comment: "API.SyncState.downloadFailed description"),
 				message: state.description,
 				actionTitle: NSLocalizedString("Retry", comment: "Retry action title shown when API.SyncState.dowloading = .downloadFailed"),
 				actionHandler: { self.update(self) }
 			)
-			
-		case let .parsing(completedUnitCount, totalUnitCount):
-			updateProgressView.setProgress(Float(completedUnitCount) / Float(totalUnitCount), animated: true)
-			
-		default:
-			break
 		}
 		
 		updateProgressDescriptionLabel.text = state.description
