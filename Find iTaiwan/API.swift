@@ -7,15 +7,13 @@ class API {
 		modelContainer: ModelContainer.default
 	)
 	
-	init(baseURL: URL, modelContainer: ModelContainer, notificationCenter: NotificationCenter = NotificationCenter.default) {
+	init(baseURL: URL, modelContainer: ModelContainer) {
 		self.baseURL = baseURL
 		self.modelContainer = modelContainer
-		self.notificationCenter = notificationCenter
 	}
 	
 	let baseURL: URL
 	let modelContainer: ModelContainer
-	let notificationCenter: NotificationCenter
 	
 	// MARK: Sync properties
 	var syncWithServerDelegate: ProgressDelegate? {
@@ -86,7 +84,6 @@ extension API {
 				
 				self?.syncWithServerLock.unlockInMainQueue()
 				self?.syncWithServerState = .parsedAndInserted
-				self?.notificationCenter.post(name: Notification.Name.DataBaseReset, object: nil)
 			}
 			self?.modelContainer.performBackgroundTask(resetDBAndSave)
 		}
@@ -111,10 +108,6 @@ extension API {
 			try! context.save()
 		}
 	}
-}
-
-public extension Notification.Name {
-	static let DataBaseReset = NSNotification.Name("Find_iTaiwan.DBReset")
 }
 
 // MARK: - Thread Safe Lock -

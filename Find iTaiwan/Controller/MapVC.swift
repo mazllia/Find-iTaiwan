@@ -94,6 +94,11 @@ class MapVC: UIViewController {
 		
 		mapView.setUserTrackingMode(.follow, animated: false)
 		
+		NotificationCenter.default.addObserver(self, selector: #selector(dataBaseDidReload(_:)), name: NSNotification.Name.NSManagedObjectContextObjectsDidChange, object: api.modelContainer.viewContext)
+	}
+	
+	deinit {
+		NotificationCenter.default.removeObserver(self)
 	}
 	
 	// MARK: Action
@@ -121,6 +126,10 @@ class MapVC: UIViewController {
 		
 		// TODO: In simulator, changing orientation will not call `mapView(_:, regionDidChangeAnimated:)`, the following call as consequence. Test in device!
 		mapView(mapView, regionDidChangeAnimated: false)
+	}
+	
+	func dataBaseDidReload(_: Any) {
+		updateLocationAndAnnotation(in: mapView)
 	}
 }
 
