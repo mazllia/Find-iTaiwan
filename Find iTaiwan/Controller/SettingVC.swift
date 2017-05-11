@@ -113,9 +113,11 @@ extension API.SyncState: CustomStringConvertible {
 			return NSLocalizedString("downloading from server", comment: "API.SyncState.dowloading description")
 		case .parsedAndInserted:
 			return NSLocalizedString("Update Success :)", comment: "API.SyncState.parsedAndInserted description")
-		case let .parsing(completedUnitCount, totalUnitCount):
+		case let .parsing(_, totalUnitCount):
 			// TODO: Formatted localization
-			return NSLocalizedString("processing", comment: "API.SyncState.dowloading parsing") + " \(completedUnitCount)/\(totalUnitCount)"
+			return NSLocalizedString("processing", comment: "API.SyncState.parsing processing") +
+				" \(totalUnitCount) " +
+				NSLocalizedString("routers", comment: "API.SyncState.parsing in total")
 		}
 	}
 }
