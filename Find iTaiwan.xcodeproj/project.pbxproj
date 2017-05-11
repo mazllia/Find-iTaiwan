@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061E13B11EC31AE7001FE9C0 /* AlertController + Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E13B01EC31AE7001FE9C0 /* AlertController + Present.swift */; };
+		061E13B41EC4395C001FE9C0 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E13B21EC33212001FE9C0 /* SettingVC.swift */; };
+		061E13B61EC49CE4001FE9C0 /* ViewController + Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E13B51EC49CE4001FE9C0 /* ViewController + Dismiss.swift */; };
 		062244111EBF635A00775F50 /* Node+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0622440B1EBF635A00775F50 /* Node+CoreDataClass.swift */; };
 		062244191EBF6B2E00775F50 /* City+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062244171EBF6B2E00775F50 /* City+CoreDataClass.swift */; };
 		0622441A1EBF6B2E00775F50 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062244181EBF6B2E00775F50 /* Location+CoreDataClass.swift */; };
 		067A6AA31EC02B8B00BFB30D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067A6AA21EC02B8B00BFB30D /* Model.swift */; };
 		067A6AA51EC02C7B00BFB30D /* ModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067A6AA41EC02C7B00BFB30D /* ModelContainer.swift */; };
+		067A6AA81EC05CD800BFB30D /* Location + MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067A6AA71EC05CD800BFB30D /* Location + MKAnnotation.swift */; };
+		067A6AB01EC07D9D00BFB30D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067A6AAF1EC07D9D00BFB30D /* API.swift */; };
 		06D67E731EBC4C93002885CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E721EBC4C93002885CC /* AppDelegate.swift */; };
-		06D67E751EBC4C93002885CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E741EBC4C93002885CC /* ViewController.swift */; };
+		06D67E751EBC4C93002885CC /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E741EBC4C93002885CC /* MapVC.swift */; };
 		06D67E781EBC4C93002885CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E761EBC4C93002885CC /* Main.storyboard */; };
 		06D67E7B1EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E791EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld */; };
 		06D67E7D1EBC4C93002885CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E7C1EBC4C93002885CC /* Assets.xcassets */; };
@@ -35,14 +40,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061E13B01EC31AE7001FE9C0 /* AlertController + Present.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertController + Present.swift"; sourceTree = "<group>"; };
+		061E13B21EC33212001FE9C0 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		061E13B51EC49CE4001FE9C0 /* ViewController + Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController + Dismiss.swift"; sourceTree = "<group>"; };
 		0622440B1EBF635A00775F50 /* Node+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Node+CoreDataClass.swift"; sourceTree = "<group>"; };
 		062244171EBF6B2E00775F50 /* City+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
 		062244181EBF6B2E00775F50 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
 		067A6AA21EC02B8B00BFB30D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		067A6AA41EC02C7B00BFB30D /* ModelContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelContainer.swift; sourceTree = "<group>"; };
+		067A6AA71EC05CD800BFB30D /* Location + MKAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location + MKAnnotation.swift"; sourceTree = "<group>"; };
+		067A6AAF1EC07D9D00BFB30D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		06D67E6F1EBC4C93002885CC /* Find iTaiwan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find iTaiwan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D67E721EBC4C93002885CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06D67E741EBC4C93002885CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06D67E741EBC4C93002885CC /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		06D67E771EBC4C93002885CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06D67E7A1EBC4C93002885CC /* Find_iTaiwan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Find_iTaiwan.xcdatamodel; sourceTree = "<group>"; };
 		06D67E7C1EBC4C93002885CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +84,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061E13B71EC49D94001FE9C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06D67E741EBC4C93002885CC /* MapVC.swift */,
+				061E13B21EC33212001FE9C0 /* SettingVC.swift */,
+				061E13B51EC49CE4001FE9C0 /* ViewController + Dismiss.swift */,
+				061E13B01EC31AE7001FE9C0 /* AlertController + Present.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		067A6AA61EC05CBC00BFB30D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				067A6AA71EC05CD800BFB30D /* Location + MKAnnotation.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		06D67E661EBC4C93002885CC = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				06D67E721EBC4C93002885CC /* AppDelegate.swift */,
-				06D67E741EBC4C93002885CC /* ViewController.swift */,
+				067A6AAF1EC07D9D00BFB30D /* API.swift */,
 				06D67E761EBC4C93002885CC /* Main.storyboard */,
+				061E13B71EC49D94001FE9C0 /* Controller */,
+				067A6AA61EC05CBC00BFB30D /* View */,
 				06D67E881EBC4E7E002885CC /* Model */,
 				06D67E871EBC4D8E002885CC /* Server */,
 				06D67E8A1EBC4E9B002885CC /* Supporting Files */,
@@ -262,10 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				067A6AB01EC07D9D00BFB30D /* API.swift in Sources */,
+				061E13B61EC49CE4001FE9C0 /* ViewController + Dismiss.swift in Sources */,
+				061E13B41EC4395C001FE9C0 /* SettingVC.swift in Sources */,
 				0622441A1EBF6B2E00775F50 /* Location+CoreDataClass.swift in Sources */,
+				067A6AA81EC05CD800BFB30D /* Location + MKAnnotation.swift in Sources */,
+				061E13B11EC31AE7001FE9C0 /* AlertController + Present.swift in Sources */,
 				062244191EBF6B2E00775F50 /* City+CoreDataClass.swift in Sources */,
 				06D67E911EBC53C2002885CC /* DataSerializer.swift in Sources */,
-				06D67E751EBC4C93002885CC /* ViewController.swift in Sources */,
+				06D67E751EBC4C93002885CC /* MapVC.swift in Sources */,
 				062244111EBF635A00775F50 /* Node+CoreDataClass.swift in Sources */,
 				06D67E731EBC4C93002885CC /* AppDelegate.swift in Sources */,
 				067A6AA51EC02C7B00BFB30D /* ModelContainer.swift in Sources */,
