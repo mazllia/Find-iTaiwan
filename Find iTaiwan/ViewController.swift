@@ -106,7 +106,10 @@ class ViewController: UIViewController {
 	
 	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
 		let shouldHideToolBar = traitCollection.verticalSizeClass == .compact
-		navigationController?.setToolbarHidden(shouldHideToolBar, animated: true)
+		navigationController?.setToolbarHidden(shouldHideToolBar, animated: false)
+		
+		// TODO: In simulator, changing orientation will not call `mapView(_:, regionDidChangeAnimated:)`, the following call as consequence. Test in device!
+		mapView(mapView, regionDidChangeAnimated: false)
 	}
 }
 
