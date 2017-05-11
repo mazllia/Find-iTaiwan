@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Find_iTaiwan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Find_iTaiwan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,15 +33,17 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="setting" id="C4L-fr-76b"/>
+                        <barButtonItem title="Setting" id="C4L-fr-76b">
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="qJp-Ss-BAY"/>
-                        <barButtonItem title="follow me" id="nDU-9n-0Ka">
+                        <barButtonItem title="Where Am I" id="nDU-9n-0Ka">
                             <connections>
                                 <action selector="follow:" destination="BYZ-38-t0r" id="jA9-RG-Epe"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="wVt-Gw-f6H"/>
+                    <navigationItem key="navigationItem" id="wVt-Gw-f6H">
+                        <barButtonItem key="backBarButtonItem" title="map" id="DRV-yu-5wG"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="WUS-OM-RsX" id="ZaZ-9D-YoI"/>
                     </connections>
