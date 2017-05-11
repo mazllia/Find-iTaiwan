@@ -3,7 +3,7 @@ import CoreLocation
 import MapKit
 import CoreData
 
-class ViewController: UIViewController {
+class MapVC: UIViewController {
 	/**
 	To prevent too many annotations showing in map, this threshold provides threshold guidance depends on current _size classes_.
 	- cameraDistance: if map.camera.altitude is smaller than this, show annotations
@@ -42,15 +42,26 @@ class ViewController: UIViewController {
 		}()
 		
 		func configureNavigationBar() {
-			// TODO: Formatted localization
-			navigationItem.title = shouldShowAnnotations ? nil :
-				locations.count.description + " " + NSLocalizedString("routers", comment: "When map camera latitude has not reached max visible annotations, shows navigation item title string")
+			let noLocationOnScreen = locations.isEmpty
 			
-			navigationItem.prompt = shouldShowAnnotations ? nil :
-				NSLocalizedString("zoom in for details", comment: "When map camera latitude has not reached max visible annotations, shows navigation item prompt string")
-			
-			navigationController?.setNavigationBarHidden(shouldShowAnnotations ? true : false, animated: true)
-			
+			switch (shouldShowAnnotations, noLocationOnScreen) {
+			case (_, true):
+				navigationItem.title = NSLocalizedString("No router in this area", comment: "Navigaition item title when no annotation can be shown on screen")
+				navigationItem.prompt = nil
+				navigationController?.setNavigationBarHidden(false, animated: true)
+				
+			case (false, _):
+				// TODO: Formatted localization
+				navigationItem.title = locations.count.description + " " +
+					NSLocalizedString("routers", comment: "When map does not reached annotationVisibleThreshold, shows navigation item title string")
+				navigationItem.prompt = NSLocalizedString("zoom in for details", comment: "When map does not reached annotationVisibleThreshold, shows navigation item prompt string")
+				navigationController?.setNavigationBarHidden(false, animated: true)
+				
+			default:
+				navigationItem.title = nil
+				navigationItem.prompt = nil
+				navigationController?.setNavigationBarHidden(true, animated: true)
+			}
 		}
 		func configureAnnotations() {
 			guard shouldShowAnnotations else {
@@ -115,7 +126,7 @@ class ViewController: UIViewController {
 
 // MARK: - Delegates
 // MARK: Map View
-extension ViewController: MKMapViewDelegate {
+extension MapVC: MKMapViewDelegate {
 	func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
 		 updateLocationAndAnnotation(in: mapView)
 	}
