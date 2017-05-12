@@ -69,8 +69,9 @@ extension API {
 			}
 			
 			func resetDBAndSave(in context: NSManagedObjectContext) {
-				context.automaticallyMergesChangesFromParent = true
-				context.reset()
+				[Location.fetchRequest(), Node.fetchRequest(), City.fetchRequest()]
+					.map() { NSBatchDeleteRequest(fetchRequest: $0) }
+					.forEach { try! context.execute($0) }
 				
 				let string = String(big5EData: data)!
 				let dictionaries = try! DataSerializer.serialize(string: string)
