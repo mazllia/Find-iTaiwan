@@ -14,7 +14,9 @@ public class Node: NSManagedObject {
 			let latitude = Float(latitudeString),
 			let longitudeString = dictionary[Key.longitude],
 			let longitude = Float(longitudeString) else {
-				assertionFailure("Cannot create model with: \(dictionary)")
+				// FIXME: Demo purpose
+				debugPrint("Cannot create model with: \(dictionary)")
+//				assertionFailure("Cannot create model with: \(dictionary)")
 				return nil
 		}
 		
