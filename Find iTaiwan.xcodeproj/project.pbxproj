@@ -7,23 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061780491EC4DFC9002CED9E /* prebuild.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 061780481EC4DFC9002CED9E /* prebuild.sqlite */; };
+		061E13B11EC31AE7001FE9C0 /* AlertController + Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E13B01EC31AE7001FE9C0 /* AlertController + Present.swift */; };
+		061E13B41EC4395C001FE9C0 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E13B21EC33212001FE9C0 /* SettingVC.swift */; };
+		061E13B61EC49CE4001FE9C0 /* ViewController + Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E13B51EC49CE4001FE9C0 /* ViewController + Dismiss.swift */; };
+		062244111EBF635A00775F50 /* Node+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0622440B1EBF635A00775F50 /* Node+CoreDataClass.swift */; };
+		062244191EBF6B2E00775F50 /* City+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062244171EBF6B2E00775F50 /* City+CoreDataClass.swift */; };
+		0622441A1EBF6B2E00775F50 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062244181EBF6B2E00775F50 /* Location+CoreDataClass.swift */; };
+		067A6AA31EC02B8B00BFB30D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067A6AA21EC02B8B00BFB30D /* Model.swift */; };
+		067A6AA51EC02C7B00BFB30D /* ModelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067A6AA41EC02C7B00BFB30D /* ModelContainer.swift */; };
+		067A6AA81EC05CD800BFB30D /* Location + MKAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067A6AA71EC05CD800BFB30D /* Location + MKAnnotation.swift */; };
+		067A6AB01EC07D9D00BFB30D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067A6AAF1EC07D9D00BFB30D /* API.swift */; };
 		06D67E731EBC4C93002885CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E721EBC4C93002885CC /* AppDelegate.swift */; };
-		06D67E751EBC4C93002885CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E741EBC4C93002885CC /* ViewController.swift */; };
+		06D67E751EBC4C93002885CC /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E741EBC4C93002885CC /* MapVC.swift */; };
 		06D67E781EBC4C93002885CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E761EBC4C93002885CC /* Main.storyboard */; };
 		06D67E7B1EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E791EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld */; };
 		06D67E7D1EBC4C93002885CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E7C1EBC4C93002885CC /* Assets.xcassets */; };
-		06D67E801EBC4C93002885CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E7E1EBC4C93002885CC /* LaunchScreen.storyboard */; };
+		06D67E8F1EBC52B0002885CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06D67E8D1EBC52B0002885CC /* LaunchScreen.storyboard */; };
+		06D67E911EBC53C2002885CC /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E901EBC53C2002885CC /* DataSerializer.swift */; };
+		06D67E991EBC6843002885CC /* DataSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D67E981EBC6843002885CC /* DataSerializer.swift */; };
+		06D67EA41EBC7242002885CC /* test.csv in Resources */ = {isa = PBXBuildFile; fileRef = 06D67EA31EBC7242002885CC /* test.csv */; };
+		06D67EA61EBC72B9002885CC /* titleOnly.csv in Resources */ = {isa = PBXBuildFile; fileRef = 06D67EA51EBC72B9002885CC /* titleOnly.csv */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		06D67E9B1EBC6843002885CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06D67E671EBC4C93002885CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06D67E6E1EBC4C93002885CC;
+			remoteInfo = "Find iTaiwan";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		061780481EC4DFC9002CED9E /* prebuild.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = prebuild.sqlite; sourceTree = "<group>"; };
+		061E13B01EC31AE7001FE9C0 /* AlertController + Present.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertController + Present.swift"; sourceTree = "<group>"; };
+		061E13B21EC33212001FE9C0 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		061E13B51EC49CE4001FE9C0 /* ViewController + Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController + Dismiss.swift"; sourceTree = "<group>"; };
+		0622440B1EBF635A00775F50 /* Node+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Node+CoreDataClass.swift"; sourceTree = "<group>"; };
+		062244171EBF6B2E00775F50 /* City+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "City+CoreDataClass.swift"; sourceTree = "<group>"; };
+		062244181EBF6B2E00775F50 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		067A6AA21EC02B8B00BFB30D /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		067A6AA41EC02C7B00BFB30D /* ModelContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelContainer.swift; sourceTree = "<group>"; };
+		067A6AA71EC05CD800BFB30D /* Location + MKAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Location + MKAnnotation.swift"; sourceTree = "<group>"; };
+		067A6AAF1EC07D9D00BFB30D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		06D67E6F1EBC4C93002885CC /* Find iTaiwan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find iTaiwan.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D67E721EBC4C93002885CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06D67E741EBC4C93002885CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06D67E741EBC4C93002885CC /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		06D67E771EBC4C93002885CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06D67E7A1EBC4C93002885CC /* Find_iTaiwan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Find_iTaiwan.xcdatamodel; sourceTree = "<group>"; };
 		06D67E7C1EBC4C93002885CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		06D67E7F1EBC4C93002885CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06D67E811EBC4C93002885CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06D67E8E1EBC52B0002885CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Find iTaiwan/Base.lproj/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
+		06D67E901EBC53C2002885CC /* DataSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSerializer.swift; sourceTree = "<group>"; };
+		06D67E961EBC6843002885CC /* Find iTaiwan Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Find iTaiwan Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06D67E981EBC6843002885CC /* DataSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSerializer.swift; sourceTree = "<group>"; };
+		06D67E9A1EBC6843002885CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		06D67EA31EBC7242002885CC /* test.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.csv; sourceTree = "<group>"; };
+		06D67EA51EBC72B9002885CC /* titleOnly.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = titleOnly.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,13 +76,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06D67E931EBC6843002885CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061E13B71EC49D94001FE9C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06D67E741EBC4C93002885CC /* MapVC.swift */,
+				061E13B21EC33212001FE9C0 /* SettingVC.swift */,
+				061E13B51EC49CE4001FE9C0 /* ViewController + Dismiss.swift */,
+				061E13B01EC31AE7001FE9C0 /* AlertController + Present.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		067A6AA61EC05CBC00BFB30D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				067A6AA71EC05CD800BFB30D /* Location + MKAnnotation.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		06D67E661EBC4C93002885CC = {
 			isa = PBXGroup;
 			children = (
 				06D67E711EBC4C93002885CC /* Find iTaiwan */,
+				06D67E971EBC6843002885CC /* Find iTaiwan Tests */,
 				06D67E701EBC4C93002885CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				06D67E6F1EBC4C93002885CC /* Find iTaiwan.app */,
+				06D67E961EBC6843002885CC /* Find iTaiwan Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,14 +127,66 @@
 			isa = PBXGroup;
 			children = (
 				06D67E721EBC4C93002885CC /* AppDelegate.swift */,
-				06D67E741EBC4C93002885CC /* ViewController.swift */,
+				067A6AAF1EC07D9D00BFB30D /* API.swift */,
 				06D67E761EBC4C93002885CC /* Main.storyboard */,
-				06D67E7C1EBC4C93002885CC /* Assets.xcassets */,
-				06D67E7E1EBC4C93002885CC /* LaunchScreen.storyboard */,
-				06D67E811EBC4C93002885CC /* Info.plist */,
-				06D67E791EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld */,
+				061E13B71EC49D94001FE9C0 /* Controller */,
+				067A6AA61EC05CBC00BFB30D /* View */,
+				06D67E881EBC4E7E002885CC /* Model */,
+				06D67E871EBC4D8E002885CC /* Server */,
+				06D67E8A1EBC4E9B002885CC /* Supporting Files */,
 			);
 			path = "Find iTaiwan";
+			sourceTree = "<group>";
+		};
+		06D67E871EBC4D8E002885CC /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				06D67E901EBC53C2002885CC /* DataSerializer.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		06D67E881EBC4E7E002885CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				067A6AA41EC02C7B00BFB30D /* ModelContainer.swift */,
+				06D67E791EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld */,
+				062244171EBF6B2E00775F50 /* City+CoreDataClass.swift */,
+				062244181EBF6B2E00775F50 /* Location+CoreDataClass.swift */,
+				0622440B1EBF635A00775F50 /* Node+CoreDataClass.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06D67E8A1EBC4E9B002885CC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				061780481EC4DFC9002CED9E /* prebuild.sqlite */,
+				06D67E8D1EBC52B0002885CC /* LaunchScreen.storyboard */,
+				06D67E7C1EBC4C93002885CC /* Assets.xcassets */,
+				06D67E811EBC4C93002885CC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		06D67E971EBC6843002885CC /* Find iTaiwan Tests */ = {
+			isa = PBXGroup;
+			children = (
+				06D67E981EBC6843002885CC /* DataSerializer.swift */,
+				067A6AA21EC02B8B00BFB30D /* Model.swift */,
+				06D67EA01EBC68C5002885CC /* Resources */,
+			);
+			path = "Find iTaiwan Tests";
+			sourceTree = "<group>";
+		};
+		06D67EA01EBC68C5002885CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				06D67EA31EBC7242002885CC /* test.csv */,
+				06D67EA51EBC72B9002885CC /* titleOnly.csv */,
+				06D67E9A1EBC6843002885CC /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +209,24 @@
 			productReference = 06D67E6F1EBC4C93002885CC /* Find iTaiwan.app */;
 			productType = "com.apple.product-type.application";
 		};
+		06D67E951EBC6843002885CC /* Find iTaiwan Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06D67E9D1EBC6843002885CC /* Build configuration list for PBXNativeTarget "Find iTaiwan Tests" */;
+			buildPhases = (
+				06D67E921EBC6843002885CC /* Sources */,
+				06D67E931EBC6843002885CC /* Frameworks */,
+				06D67E941EBC6843002885CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06D67E9C1EBC6843002885CC /* PBXTargetDependency */,
+			);
+			name = "Find iTaiwan Tests";
+			productName = "Find iTaiwan Tests";
+			productReference = 06D67E961EBC6843002885CC /* Find iTaiwan Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -101,6 +241,12 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 556AH62ZM2;
 						ProvisioningStyle = Automatic;
+					};
+					06D67E951EBC6843002885CC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 556AH62ZM2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 06D67E6E1EBC4C93002885CC;
 					};
 				};
 			};
@@ -118,6 +264,7 @@
 			projectRoot = "";
 			targets = (
 				06D67E6E1EBC4C93002885CC /* Find iTaiwan */,
+				06D67E951EBC6843002885CC /* Find iTaiwan Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,9 +274,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06D67E801EBC4C93002885CC /* LaunchScreen.storyboard in Resources */,
+				06D67E8F1EBC52B0002885CC /* LaunchScreen.storyboard in Resources */,
 				06D67E7D1EBC4C93002885CC /* Assets.xcassets in Resources */,
+				061780491EC4DFC9002CED9E /* prebuild.sqlite in Resources */,
 				06D67E781EBC4C93002885CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06D67E941EBC6843002885CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06D67EA41EBC7242002885CC /* test.csv in Resources */,
+				06D67EA61EBC72B9002885CC /* titleOnly.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,13 +297,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06D67E751EBC4C93002885CC /* ViewController.swift in Sources */,
+				067A6AB01EC07D9D00BFB30D /* API.swift in Sources */,
+				061E13B61EC49CE4001FE9C0 /* ViewController + Dismiss.swift in Sources */,
+				061E13B41EC4395C001FE9C0 /* SettingVC.swift in Sources */,
+				0622441A1EBF6B2E00775F50 /* Location+CoreDataClass.swift in Sources */,
+				067A6AA81EC05CD800BFB30D /* Location + MKAnnotation.swift in Sources */,
+				061E13B11EC31AE7001FE9C0 /* AlertController + Present.swift in Sources */,
+				062244191EBF6B2E00775F50 /* City+CoreDataClass.swift in Sources */,
+				06D67E911EBC53C2002885CC /* DataSerializer.swift in Sources */,
+				06D67E751EBC4C93002885CC /* MapVC.swift in Sources */,
+				062244111EBF635A00775F50 /* Node+CoreDataClass.swift in Sources */,
 				06D67E731EBC4C93002885CC /* AppDelegate.swift in Sources */,
+				067A6AA51EC02C7B00BFB30D /* ModelContainer.swift in Sources */,
 				06D67E7B1EBC4C93002885CC /* Find_iTaiwan.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		06D67E921EBC6843002885CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06D67E991EBC6843002885CC /* DataSerializer.swift in Sources */,
+				067A6AA31EC02B8B00BFB30D /* Model.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06D67E9C1EBC6843002885CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06D67E6E1EBC4C93002885CC /* Find iTaiwan */;
+			targetProxy = 06D67E9B1EBC6843002885CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		06D67E761EBC4C93002885CC /* Main.storyboard */ = {
@@ -157,10 +341,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		06D67E7E1EBC4C93002885CC /* LaunchScreen.storyboard */ = {
+		06D67E8D1EBC52B0002885CC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				06D67E7F1EBC4C93002885CC /* Base */,
+				06D67E8E1EBC52B0002885CC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -268,7 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 556AH62ZM2;
-				INFOPLIST_FILE = "Find iTaiwan/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Find iTaiwan/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.DaiPengYang.Find-iTaiwan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -281,11 +465,39 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 556AH62ZM2;
-				INFOPLIST_FILE = "Find iTaiwan/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Find iTaiwan/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tw.DaiPengYang.Find-iTaiwan";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		06D67E9E1EBC6843002885CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 556AH62ZM2;
+				INFOPLIST_FILE = "Find iTaiwan Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tw.DaiPengYang.Find-iTaiwan-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find iTaiwan.app/Find iTaiwan";
+			};
+			name = Debug;
+		};
+		06D67E9F1EBC6843002885CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 556AH62ZM2;
+				INFOPLIST_FILE = "Find iTaiwan Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tw.DaiPengYang.Find-iTaiwan-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Find iTaiwan.app/Find iTaiwan";
 			};
 			name = Release;
 		};
@@ -308,6 +520,16 @@
 				06D67E861EBC4C93002885CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06D67E9D1EBC6843002885CC /* Build configuration list for PBXNativeTarget "Find iTaiwan Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06D67E9E1EBC6843002885CC /* Debug */,
+				06D67E9F1EBC6843002885CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
