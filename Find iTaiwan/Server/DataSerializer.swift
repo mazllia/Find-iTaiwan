@@ -12,6 +12,7 @@ public class DataSerializer {
 	
 	internal static let postCodeRegularExpression = try! NSRegularExpression(pattern: "^\\d{3|5}", options: [])
 	
+	// FIXME: This kinda parsing does not conform to CSV format. Implement target: "attribute, with comma", "another"
 	/// csv title foramtted: `"主管機關","地區","熱點名稱","地址","緯度","經度"`
 	public static func serialize(string: String) throws -> [[String : String]] {
 		return string
