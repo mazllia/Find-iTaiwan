@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061780491EC4DFC9002CED9E /* prebuild.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 061780481EC4DFC9002CED9E /* prebuild.sqlite */; };
 		061E13B11EC31AE7001FE9C0 /* AlertController + Present.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E13B01EC31AE7001FE9C0 /* AlertController + Present.swift */; };
 		061E13B41EC4395C001FE9C0 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E13B21EC33212001FE9C0 /* SettingVC.swift */; };
 		061E13B61EC49CE4001FE9C0 /* ViewController + Dismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061E13B51EC49CE4001FE9C0 /* ViewController + Dismiss.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061780481EC4DFC9002CED9E /* prebuild.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = prebuild.sqlite; sourceTree = "<group>"; };
 		061E13B01EC31AE7001FE9C0 /* AlertController + Present.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertController + Present.swift"; sourceTree = "<group>"; };
 		061E13B21EC33212001FE9C0 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		061E13B51EC49CE4001FE9C0 /* ViewController + Dismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController + Dismiss.swift"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		06D67E8A1EBC4E9B002885CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				061780481EC4DFC9002CED9E /* prebuild.sqlite */,
 				06D67E8D1EBC52B0002885CC /* LaunchScreen.storyboard */,
 				06D67E7C1EBC4C93002885CC /* Assets.xcassets */,
 				06D67E811EBC4C93002885CC /* Info.plist */,
@@ -273,6 +276,7 @@
 			files = (
 				06D67E8F1EBC52B0002885CC /* LaunchScreen.storyboard in Resources */,
 				06D67E7D1EBC4C93002885CC /* Assets.xcassets in Resources */,
+				061780491EC4DFC9002CED9E /* prebuild.sqlite in Resources */,
 				06D67E781EBC4C93002885CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

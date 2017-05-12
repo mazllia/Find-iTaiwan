@@ -94,7 +94,17 @@ class MapVC: UIViewController {
 		
 		mapView.setUserTrackingMode(.follow, animated: false)
 		
-		NotificationCenter.default.addObserver(self, selector: #selector(dataBaseDidReload(_:)), name: NSNotification.Name.NSManagedObjectContextObjectsDidChange, object: api.modelContainer.viewContext)
+		func observeDBChanges() {
+			NotificationCenter.default.addObserver(self, selector: #selector(dataBaseDidReload(_:)),
+			                                       name: NSNotification.Name.NSPersistentStoreCoordinatorStoresDidChange,
+			                                       object: api.modelContainer.persistentStoreCoordinator
+			)
+			NotificationCenter.default.addObserver(self, selector: #selector(dataBaseDidReload(_:)),
+			                                       name: NSNotification.Name.NSManagedObjectContextObjectsDidChange,
+			                                       object: api.modelContainer.viewContext
+			)
+		}
+		observeDBChanges()
 	}
 	
 	deinit {

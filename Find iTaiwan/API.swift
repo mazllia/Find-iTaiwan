@@ -91,21 +91,15 @@ extension API {
 	}
 }
 
-// MARK: - Load and Parse File -
+// MARK: - Reset -
 extension API {
-	func load(resource: String, extension: String = "csv", inBundle bundle: Bundle = Bundle.main) {
-		guard let URL = bundle.url(forResource: resource, withExtension: `extension`),
-		let data = try? Data(contentsOf: URL),
-		let string = String(big5EData: data)
-		else {
-			return
-		}
-		
-		modelContainer.performBackgroundTask() { context in
-			context.reset()
-			try! DataSerializer.serialize(string: string)
-				.forEach() { _ = Node($0, insertInto: context) }
-			try! context.save()
+	func resetToBuildInDataBase() {
+		try! modelContainer.removePersistentStores()
+		try! modelContainer.copyPrebuildPersistenStore(url: type(of: modelContainer).defaultPrebuildDataBaseURL)
+		modelContainer.loadPersistentStores() { storeDescription, error in
+			if let error = error {
+				assertionFailure("Loading core data stack error:\(error) of store \(storeDescription)")
+			}
 		}
 	}
 }
