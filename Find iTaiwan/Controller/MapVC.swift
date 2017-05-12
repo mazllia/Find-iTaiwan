@@ -70,7 +70,7 @@ class MapVC: UIViewController {
 			}
 			
 			let newlyInsertedLocations = didShowAnnotaions ? Set(locations).subtracting(previousLocations).allObjects : locations
-			let removedLocations = Set(previousLocations).subtracting(locations).allObjects
+			let removedLocations = didShowAnnotaions ? Set(previousLocations).subtracting(locations).allObjects : []
 			
 			map.removeAnnotations(removedLocations)
 			map.addAnnotations(newlyInsertedLocations)
